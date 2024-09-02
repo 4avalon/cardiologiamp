@@ -7,40 +7,39 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Caminho relativo ao arquivo CSS -->
 </head>
 <body>
-    <!-- Menu de Navegação -->
-   <header class="main-header">
-    <nav class="navbar">
-        <a href="#" class="logo">Ritmo Clinic</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#biografia">Biografia</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#consultorio">Consultório</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li class="more">
-                <a href="#">Mais</a>
-                <div class="dropdown-content">
-                    <a href="#option1">Opção 1</a>
-                    <a href="#option2">Opção 2</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <div class="container">
+        <!-- Menu de Navegação -->
+        <header class="main-header">
+            <nav class="navbar">
+                <a href="#" class="logo">Ritmo Clinic</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#biografia">Biografia</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#consultorio">Consultório</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li class="more">
+                        <a href="#">Mais</a>
+                        <div class="dropdown-content">
+                            <a href="#option1">Opção 1</a>
+                            <a href="#option2">Opção 2</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
+        <!-- Seção de Entrada (Hero Section) -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h2>Dra. Maíra Rodrigues Oliveira Pimenta</h2>
+                <p>Cardiologista e Arritmologista - Cuidado com Excelência e Humanidade</p>
+                <a href="#contato" class="cta-btn">Agende uma Consulta</a>
+            </div>
+        </section>
 
-    <!-- Seção de Entrada (Hero Section) -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h2>Dra. Maíra Rodrigues Oliveira Pimenta</h2>
-            <p>Cardiologista e Arritmologista - Cuidado com Excelência e Humanidade</p>
-            <a href="#contato" class="cta-btn">Agende uma Consulta</a>
-        </div>
-    </section>
-
-    <!-- Seção de Biografia -->
-    <section id="biografia" class="biografia-section">
-        <div class="container">
+        <!-- Seção de Biografia -->
+        <section id="biografia" class="biografia-section">
             <div class="biografia-text">
                 <h2>Sobre a Dra. Maíra</h2>
                 <p>Dra. Maíra é uma renomada cardiologista com especialização em arritmologia, dedicando sua carreira ao cuidado e tratamento de pacientes com doenças cardíacas complexas. Com uma formação acadêmica exemplar e experiência profissional em instituições de prestígio, Dra. Maíra combina conhecimento técnico com uma abordagem humanizada no atendimento.</p>
@@ -48,12 +47,10 @@
             <div class="biografia-img">
                 <img src="assets/dra-maira.jpg" alt="Foto da Dra. Maíra"> <!-- Caminho relativo atualizado -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção de Serviços -->
-    <section id="servicos" class="servicos-section">
-        <div class="container">
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="servicos-section">
             <h2>Nossos Serviços</h2>
             <div class="services-grid">
                 <div class="service-item">
@@ -73,12 +70,10 @@
                     <p>Implantação e acompanhamento de dispositivos cardíacos.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção do Consultório -->
-    <section id="consultorio" class="consultorio-section">
-        <div class="container">
+        <!-- Seção do Consultório -->
+        <section id="consultorio" class="consultorio-section">
             <h2>Nosso Consultório</h2>
             <div class="consultorio-content">
                 <p>Localizado na Vila Mariana, São Paulo, nosso consultório oferece um ambiente acolhedor e equipamentos de última geração para garantir o melhor cuidado aos nossos pacientes.</p>
@@ -87,12 +82,10 @@
                     <img src="assets/consultorio2.jpg" alt="Sala de Espera"> <!-- Caminho relativo atualizado -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="contato-section">
-        <div class="container">
+        <!-- Seção de Contato -->
+        <section id="contato" class="contato-section">
             <h2>Entre em Contato</h2>
             <form action="envia.php" method="post" class="contato-form">
                 <input type="text" name="nome" placeholder="Seu Nome" required>
@@ -106,16 +99,16 @@
 
     <!-- Rodapé -->
     <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2024 Dra. Maíra Rodrigues Oliveira Pimenta. Todos os direitos reservados.</p>
-            <ul class="social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-        </div>
+        <p>&copy; 2024 Dra. Maíra Rodrigues Oliveira Pimenta. Todos os direitos reservados.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
     </footer>
+</div>
 
-    <script src="js/scripts.js"></script> <!-- Caminho relativo atualizado -->
+<script src="js/scripts.js"></script> <!-- Caminho relativo atualizado -->
+
 </body>
 </html>

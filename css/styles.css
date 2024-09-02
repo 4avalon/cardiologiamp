@@ -1,367 +1,280 @@
-/* ==============================================
-   Estilos Globais
-   ============================================== */
-
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset de CSS */
+* {
     margin: 0;
     padding: 0;
-    font-size: 18px; /* Tamanho da fonte para boa leitura */
-    line-height: 1.6; /* Espaçamento confortável entre linhas */
-    color: #333; /* Cor do texto em cinza escuro */
-    background-color: #f9f9f9; /* Fundo claro */
+    box-sizing: border-box;
 }
 
-/* ==============================================
-   Estilo do Menu de Navegação
-   ============================================== */
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
+/* Container para centralizar o conteúdo e limitar a largura */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Cabeçalho e navegação */
 .main-header {
-    background-color: #1976D2; /* Azul mais escuro para o cabeçalho */
-    color: #fff;
+    background-color: #007bff;
     padding: 10px 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border-bottom: 1px solid #e0e0e0; /* Linha inferior cinza clara */
+    margin-bottom: 20px;
 }
-
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 20px;
 }
 
 .navbar .logo {
-    font-size: 1.5em;
+    color: #fff;
+    font-size: 24px;
     font-weight: bold;
-    color: #FFFFFF; /* Texto branco */
     text-decoration: none;
 }
 
-.nav-links {
+.navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
 }
 
-.nav-links li {
-    position: relative;
+.navbar .nav-links li {
+    margin-left: 20px;
 }
 
-.nav-links a {
-    color: #FFFFFF; /* Texto branco */
+.navbar .nav-links a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+    font-size: 16px;
 }
 
-.nav-links a:hover {
-    color: #FF5722; /* Texto vermelho alaranjado ao passar o mouse */
-}
-
-/* Estilo do botão 'Mais' com dropdown */
-.nav-links li.more {
-    cursor: pointer;
-}
-
-.nav-links li.more:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
+.navbar .nav-links .more .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 12px 16px;
-    z-index: 1000;
-    top: 100%; /* Alinhado abaixo do item de menu */
-    left: 0;
-    min-width: 150px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
 }
 
-.dropdown-content a {
-    color: #000000;
-    text-decoration: none;
+.navbar .nav-links .more:hover .dropdown-content {
     display: block;
-    padding: 8px 0;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
+.navbar .nav-links .more .dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
 }
 
-/* ==============================================
-   Estilo da Hero Section (Seção de Entrada)
-   ============================================== */
-
+/* Seção Hero */
 .hero-section {
-    background: url('../assets/hero-bg.jpg') no-repeat center center/cover; /* Placeholder para a imagem */
+    background-color: #007bff;
     color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 50px 20px;
     text-align: center;
-    padding: 0 20px;
+    border-radius: 8px;
 }
 
 .hero-section h2 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .hero-section p {
-    font-size: 1.5em;
-    margin: 20px 0;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-.cta-btn {
-    background-color: #FF5722; /* Botão vermelho alaranjado para destaque */
-    color: #FFFFFF;
-    padding: 12px 24px;
-    font-size: 1.1em; /* Aumentando o tamanho da fonte no botão */
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+.hero-section .cta-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
-.cta-btn:hover {
-    background-color: #E64A19; /* Vermelho escuro ao passar o mouse */
-}
-
-/* ==============================================
-   Estilo da Seção de Biografia
-   ============================================== */
-
+/* Seção de Biografia */
 .biografia-section {
-    background-color: #f1f1f1;
-    padding: 60px 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite que as colunas quebrem em dispositivos menores */
+    justify-content: space-between;
+    margin: 40px 0;
 }
 
 .biografia-text {
-    max-width: 600px;
+    flex: 1;
     margin-right: 20px;
-    flex-basis: 100%;
+}
+
+.biografia-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.biografia-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.biografia-img {
+    flex: 1;
     text-align: center;
 }
 
 .biografia-img img {
-    max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px;
-    margin-bottom: 20px;
-    max-height: 400px; /* Limita a altura da imagem para que não fique grande demais */
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ==============================================
-   Estilo da Seção de Serviços
-   ============================================== */
-
+/* Seção de Serviços */
 .servicos-section {
-    padding: 60px 20px;
-    background-color: #fff;
+    text-align: center;
+    margin: 40px 0;
 }
 
 .servicos-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .service-item {
-    background-color: #2196F3; /* Azul médio para os serviços */
-    color: #FFFFFF;
+    flex: 1;
+    background-color: #007bff;
+    color: #fff;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    max-width: 280px;
 }
 
 .service-item h3 {
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
-.service-item:hover {
-    background-color: #1976D2; /* Azul mais escuro ao passar o mouse */
+.service-item p {
+    font-size: 16px;
 }
 
-/* ==============================================
-   Estilo da Seção do Consultório
-   ============================================== */
-
+/* Seção do Consultório */
 .consultorio-section {
-    background-color: #f1f1f1;
-    padding: 60px 20px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.consultorio-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .consultorio-content {
-    text-align: center;
+    margin-top: 20px;
+}
+
+.consultorio-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .consultorio-gallery {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
-    gap: 20px; /* Espaçamento entre as imagens */
+    gap: 20px;
 }
 
 .consultorio-gallery img {
-    width: 48%; /* Cada imagem ocupa 48% da largura do container */
-    height: auto; /* Mantém a proporção original da imagem */
-    border-radius: 10px;
-    margin: 10px 0; /* Margem entre as imagens */
-    max-height: 300px; /* Limita a altura das imagens */
+    max-width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* ==============================================
-   Estilo da Seção de Contato
-   ============================================== */
-
+/* Seção de Contato */
 .contato-section {
-    padding: 60px 20px;
-    background-color: #fff;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.contato-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .contato-form {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .contato-form input,
 .contato-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 16px;
 }
 
 .contato-form button.cta-btn {
-    align-self: flex-start;
+    width: 50%;
+    max-width: 200px;
+    background-color: #ff6f61;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* ==============================================
-   Estilo do Rodapé
-   ============================================== */
-
+/* Rodapé */
 .main-footer {
-    background-color: #0D47A1; /* Azul escuro para o rodapé */
-    color: #FFFFFF;
-    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .main-footer p {
-    margin: 10px 0;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.social-links {
+.main-footer .social-links {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    margin: 20px 0 0 0;
+    gap: 20px;
 }
 
-.social-links li {
-    margin: 0 10px;
-}
-
-.social-links a {
+.main-footer .social-links li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    color: #FF5722; /* Detalhe em vermelho alaranjado */
-}
-
-/* ==============================================
-   Media Queries para Responsividade
-   ============================================== */
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .hero-section h2 {
-        font-size: 2em;
-    }
-
-    .hero-section p {
-        font-size: 1.2em;
-    }
-
-    .cta-btn {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr; /* Colunas únicas em dispositivos menores */
-    }
-
-    .biografia-text, .biografia-img img {
-        text-align: center;
-        margin: 0 auto;
-        flex-basis: 100%;
-    }
-
-    .consultorio-gallery img {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-
-
-@media (min-width: 769px) {
-    /* Mantém o menu fixo apenas em telas maiores */
-    .main-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Em telas menores, o menu não será fixo */
-    .main-header {
-        position: relative;
-    }
+    font-size: 16px;
 }
