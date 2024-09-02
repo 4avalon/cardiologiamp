@@ -278,3 +278,97 @@ body {
     text-decoration: none;
     font-size: 16px;
 }
+/* Estilos para smartphones e dispositivos móveis menores */
+@media (max-width: 768px) {
+
+    /* Ajustes gerais para telas menores */
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Estilo para o menu de navegação */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Estilo da seção hero */
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-section h2 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    /* Estilo da seção de biografia */
+    .biografia-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .biografia-text {
+        margin: 0 0 20px 0;
+    }
+
+    .biografia-img img {
+        max-width: 100%;
+    }
+
+    /* Estilo da seção de serviços */
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    /* Estilo da seção do consultório */
+    .consultorio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultorio-gallery img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Estilo da seção de contato */
+    .contato-form input,
+    .contato-form textarea {
+        width: 100%;
+    }
+
+    .contato-form button.cta-btn {
+        width: 100%;
+    }
+
+    /* Estilo para o rodapé */
+    .main-footer {
+        padding: 15px;
+    }
+
+    .main-footer .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
