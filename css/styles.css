@@ -20,14 +20,11 @@ body {
     background-color: #1976D2; /* Azul mais escuro para o cabeçalho */
     color: #fff;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     border-bottom: 1px solid #e0e0e0; /* Linha inferior cinza clara */
 }
+
 
 .navbar {
     display: flex;
@@ -347,5 +344,24 @@ body {
     .consultorio-gallery img {
         width: 100%;
         margin: 10px 0;
+    }
+}
+
+
+
+@media (min-width: 769px) {
+    /* Mantém o menu fixo apenas em telas maiores */
+    .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Em telas menores, o menu não será fixo */
+    .main-header {
+        position: relative;
     }
 }
