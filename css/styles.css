@@ -220,11 +220,21 @@ body {
     text-align: center;
 }
 
-.consultorio-gallery img {
-    width: 48%;
-    margin: 10px 1%;
-    border-radius: 10px;
+.consultorio-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
+    gap: 20px; /* Espaçamento entre as imagens */
 }
+
+.consultorio-gallery img {
+    width: 48%; /* Cada imagem ocupa 48% da largura do container */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 10px;
+    margin: 10px 0; /* Margem entre as imagens */
+    max-height: 300px; /* Limita a altura das imagens */
+}
+
 
 /* ==============================================
    Estilo da Seção de Contato
