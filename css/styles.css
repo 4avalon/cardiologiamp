@@ -3,58 +3,112 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #fff;
+    font-size: 18px; /* Aumentando o tamanho da fonte para melhor leitura */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Texto em cinza escuro para melhor contraste */
+    background-color: #f9f9f9; /* Fundo claro para um contraste suave */
 }
 
-/* Menu de navegação */
+/* Estilo do Menu de Navegação */
 .main-header {
-    background-color: #1a73e8; /* Azul */
+    background-color: #1976D2; /* Azul mais escuro para o cabeçalho */
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-bottom: 1px solid #e0e0e0; /* Linha inferior cinza clara */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.navbar h1 a {
-    color: #fff;
-    text-decoration: none;
+.navbar .logo {
     font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFFFF; /* Texto branco */
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 30px;
     margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    position: relative;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #FFFFFF; /* Texto branco */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 5px 10px;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff0000; /* Detalhe em vermelho */
+    color: #FF5722; /* Texto vermelho alaranjado ao passar o mouse */
 }
 
-/* Seção de Entrada */
+/* Estilo do botão 'Mais' com dropdown */
+.nav-links li.more {
+    cursor: pointer;
+}
+
+.nav-links li.more:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+    z-index: 1000;
+    top: 100%; /* Alinhado abaixo do item de menu */
+    left: 0;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
+}
+
+/* Ajuste de dimensões das imagens */
+.biografia-img img, .consultorio-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da Hero Section */
 .hero-section {
-    background: url('../assets/hero-bg.jpg') no-repeat center center/cover; /* Placeholder for the background image */
+    background: url('../assets/hero-bg.jpg') no-repeat center center/cover; /* Placeholder para a imagem */
     color: #fff;
     height: 100vh;
     display: flex;
@@ -75,17 +129,16 @@ body {
 }
 
 .cta-btn {
-    background-color: #ff0000; /* Botão vermelho */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    background-color: #FF5722; /* Botão vermelho alaranjado para destaque */
+    color: #FFFFFF;
+    padding: 12px 24px;
+    font-size: 1.1em; /* Aumentando o tamanho da fonte no botão */
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-    background-color: #cc0000;
+    background-color: #E64A19; /* Vermelho escuro ao passar o mouse */
 }
 
 /* Seção de Biografia */
@@ -125,15 +178,20 @@ body {
 }
 
 .service-item {
-    background-color: #1a73e8;
-    color: #fff;
+    background-color: #2196F3; /* Azul médio para os serviços */
+    color: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .service-item h3 {
     margin-bottom: 15px;
+}
+
+.service-item:hover {
+    background-color: #1976D2; /* Azul mais escuro ao passar o mouse */
 }
 
 /* Seção do Consultório */
@@ -181,8 +239,8 @@ body {
 
 /* Rodapé */
 .main-footer {
-    background-color: #1a73e8;
-    color: #fff;
+    background-color: #0D47A1; /* Azul escuro para o rodapé */
+    color: #FFFFFF;
     padding: 20px;
     text-align: center;
 }
@@ -210,5 +268,5 @@ body {
 }
 
 .social-links a:hover {
-    color: #ff0000; /* Detalhe em vermelho */
+    color: #FF5722; /* Detalhe em vermelho alaranjado */
 }
