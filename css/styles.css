@@ -1,15 +1,21 @@
-/* Estilo global */
+/* ==============================================
+   Estilos Globais
+   ============================================== */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 18px; /* Aumentando o tamanho da fonte para melhor leitura */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    color: #333; /* Texto em cinza escuro para melhor contraste */
-    background-color: #f9f9f9; /* Fundo claro para um contraste suave */
+    font-size: 18px; /* Tamanho da fonte para boa leitura */
+    line-height: 1.6; /* Espaçamento confortável entre linhas */
+    color: #333; /* Cor do texto em cinza escuro */
+    background-color: #f9f9f9; /* Fundo claro */
 }
 
-/* Estilo do Menu de Navegação */
+/* ==============================================
+   Estilo do Menu de Navegação
+   ============================================== */
+
 .main-header {
     background-color: #1976D2; /* Azul mais escuro para o cabeçalho */
     color: #fff;
@@ -98,15 +104,10 @@ body {
     background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
 }
 
-/* Ajuste de dimensões das imagens */
-.biografia-img img, .consultorio-gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+/* ==============================================
+   Estilo da Hero Section (Seção de Entrada)
+   ============================================== */
 
-/* Estilo da Hero Section */
 .hero-section {
     background: url('../assets/hero-bg.jpg') no-repeat center center/cover; /* Placeholder para a imagem */
     color: #fff;
@@ -141,26 +142,38 @@ body {
     background-color: #E64A19; /* Vermelho escuro ao passar o mouse */
 }
 
-/* Seção de Biografia */
+/* ==============================================
+   Estilo da Seção de Biografia
+   ============================================== */
+
 .biografia-section {
     background-color: #f1f1f1;
     padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Permite que as colunas quebrem em dispositivos menores */
 }
 
 .biografia-text {
     max-width: 600px;
     margin-right: 20px;
+    flex-basis: 100%;
+    text-align: center;
 }
 
 .biografia-img img {
     max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px;
+    margin-bottom: 20px;
+    max-height: 400px; /* Limita a altura da imagem para que não fique grande demais */
 }
 
-/* Seção de Serviços */
+/* ==============================================
+   Estilo da Seção de Serviços
+   ============================================== */
+
 .servicos-section {
     padding: 60px 20px;
     background-color: #fff;
@@ -194,7 +207,10 @@ body {
     background-color: #1976D2; /* Azul mais escuro ao passar o mouse */
 }
 
-/* Seção do Consultório */
+/* ==============================================
+   Estilo da Seção do Consultório
+   ============================================== */
+
 .consultorio-section {
     background-color: #f1f1f1;
     padding: 60px 20px;
@@ -210,7 +226,10 @@ body {
     border-radius: 10px;
 }
 
-/* Seção de Contato */
+/* ==============================================
+   Estilo da Seção de Contato
+   ============================================== */
+
 .contato-section {
     padding: 60px 20px;
     background-color: #fff;
@@ -237,7 +256,10 @@ body {
     align-self: flex-start;
 }
 
-/* Rodapé */
+/* ==============================================
+   Estilo do Rodapé
+   ============================================== */
+
 .main-footer {
     background-color: #0D47A1; /* Azul escuro para o rodapé */
     color: #FFFFFF;
@@ -269,4 +291,51 @@ body {
 
 .social-links a:hover {
     color: #FF5722; /* Detalhe em vermelho alaranjado */
+}
+
+/* ==============================================
+   Media Queries para Responsividade
+   ============================================== */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .hero-section h2 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Colunas únicas em dispositivos menores */
+    }
+
+    .biografia-text, .biografia-img img {
+        text-align: center;
+        margin: 0 auto;
+        flex-basis: 100%;
+    }
+
+    .consultorio-gallery img {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
