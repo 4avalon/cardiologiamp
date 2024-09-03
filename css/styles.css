@@ -1,0 +1,352 @@
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. ESTILOS GERAIS */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* 3. MENU DE NAVEGAÇÃO */
+.menu {
+    background-color: transparent; /* Inicialmente transparente */
+    padding: 20px 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para quebrar em várias linhas se necessário */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white; /* Cor inicial branca */
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para contraste */
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ff4b5c; /* Cor de destaque ao passar o mouse */
+}
+
+/* 4. MENU FIXO QUANDO ROLADO */
+.menu.scrolled {
+    background-color: white; /* Muda o fundo para branco ao rolar */
+    position: fixed; /* Fixa o menu no topo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    padding: 10px 20px; /* Ajusta o padding para o menu fixo */
+}
+
+.menu.scrolled ul li a {
+    color: #333; /* Muda a cor do texto para um tom mais escuro */
+    text-shadow: none; /* Remove a sombra ao rolar */
+}
+
+/* 5. ÍCONE DO MENU (TRÊS TRAÇOS) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* 6. SEÇÃO HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero-text {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 7. SEÇÃO BIOGRAFIA */
+.biografia {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.biografia img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.biografia h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.biografia p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 8. SEÇÃO DE SERVIÇOS */
+.servicos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 50px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    max-width: 1200px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 0 20px; /* Adiciona um padding lateral para espaçamento */
+}
+
+.servico-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 90%;
+    padding: 10px; /* Ajuste o padding para reduzir a margem interna */
+}
+
+.servico-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #007bff;
+}
+
+.servico-item:hover {
+    transform: scale(1.0);
+}
+
+.servico-item h3 {
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #333;
+}
+
+.servico-item p {
+    padding: 0 20px 20px;
+    color: #666;
+    font-size: 1em;
+}
+
+
+/* 9. SEÇÃO CONSULTÓRIO */
+.consultorio {
+    padding: 100px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.consultorio h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.consultorio img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.consultorio p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 10. SEÇÃO CONTATO */
+.contato {
+    padding: 100px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* 11. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS) */
+@media screen and (max-width: 768px) {
+    /* Menu para dispositivos móveis */
+    .menu {
+        background-color: white; /* Define o fundo branco por padrão no mobile */
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    }
+
+    .menu ul {
+        display: none; /* Esconde o menu por padrão em dispositivos móveis */
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens horizontalmente */
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Ajuste para evitar sobreposição do ícone */
+        left: 0;
+        width: 100%;
+        padding-top: 10px; /* Espaço para a barra de menu */
+        z-index: 999; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    .menu ul.open {
+        display: flex; /* Mostra o menu ao adicionar a classe "open" */
+    }
+
+    .menu-icon {
+        display: block; /* Exibe o ícone de três traços em dispositivos móveis */
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1001; /* Mantém o ícone acima de outros elementos */
+    }
+
+    .menu.scrolled ul {
+        display: none; /* Garante que o menu não apareça automaticamente ao rolar */
+    }
+
+    .menu.scrolled ul.open {
+        display: flex; /* Só mostra o menu quando a classe "open" está presente */
+    }
+
+    /* Ajustes das seções para dispositivos móveis */
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .biografia img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .biografia h2,
+    .servicos h2,
+    .consultorio h2,
+    .contato h2 {
+        font-size: 28px;
+    }
+
+    .servico-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ajuste dos serviços para ficarem em uma coluna */
+    .servicos-container {
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        gap: 20px; /* Espaçamento entre os itens */
+        padding: 0 10px;
+    }
+
+    .servico-item {
+        max-width: 100%; /* Ajusta o tamanho dos itens de serviço */
+        padding: 10px;
+    }
+}
+
+
+/* 12. ESTILOS PARA DESKTOP */
+@media screen and (min-width: 769px) {
+    /* Menu para dispositivos desktop */
+    .menu ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 0 20px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+    }
+
+    .menu.scrolled ul li a {
+        color: #333; /* Cor do texto no menu fixo */
+    }
+
+    .menu.scrolled {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
