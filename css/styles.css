@@ -1,27 +1,26 @@
-/* 1. RESET BÁSICO */
+/* 1. Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. ESTILOS GERAIS */
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
-    line-height: 1.6;
     background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased; /* Para suavizar as fontes */
+    -moz-osx-font-smoothing: grayscale;
 }
-
-/* 3. MENU DE NAVEGAÇÃO */
+/* 2. Menu de Navegação */
 .menu {
-    background-color: transparent; /* Inicialmente transparente */
-    padding: 20px 20px;
+    background-color: transparent;
+    padding: 20px;
     position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu ul {
@@ -29,36 +28,34 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Para quebrar em várias linhas se necessário */
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: white; /* Cor inicial branca */
+    color: white;
     font-size: 18px;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adiciona sombra ao texto para contraste */
-    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .menu ul li a:hover {
-    color: #ff4b5c; /* Cor de destaque ao passar o mouse */
+    color: #ff4b5c;
 }
 
-/* 4. MENU FIXO QUANDO ROLADO */
+/* 3. Menu ao rolar */
 .menu.scrolled {
-    background-color: white; /* Muda o fundo para branco ao rolar */
-    position: fixed; /* Fixa o menu no topo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-    padding: 10px 20px; /* Ajusta o padding para o menu fixo */
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 
 .menu.scrolled ul li a {
-    color: #333; /* Muda a cor do texto para um tom mais escuro */
-    text-shadow: none; /* Remove a sombra ao rolar */
+    color: #333;
+    text-shadow: none;
 }
 
-/* 5. ÍCONE DO MENU (TRÊS TRAÇOS) */
+/* 4. Menu ícone para mobile */
 .menu-icon {
     display: none;
     font-size: 30px;
@@ -68,7 +65,39 @@ body {
     top: 15px;
 }
 
-/* 6. SEÇÃO HERO */
+/* Menu de três traços para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Adicionando animação ao menu quando rolar */
+.menu.scrolled {
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+/* 5. Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -93,22 +122,18 @@ body {
 
 .hero-text {
     max-width: 80%;
-    margin: 0 auto;
 }
 
 .hero-text h1 {
     font-size: 48px;
-    font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
 }
 
 .hero-text p {
     font-size: 24px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
-/* 7. SEÇÃO BIOGRAFIA */
+/* 6. Biografia */
 .biografia {
     padding: 100px 20px;
     text-align: center;
@@ -126,45 +151,36 @@ body {
 .biografia h2 {
     font-size: 36px;
     color: #007bff;
-    margin-bottom: 20px;
 }
 
 .biografia p {
-    font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
 }
-
-/* 8. SEÇÃO DE SERVIÇOS */
+/* 7. Serviços */
 .servicos {
     padding: 50px 20px;
     text-align: center;
 }
 
 .servicos h2 {
-    font-size: 2.5em;
+    font-size: 36px;
     color: #007bff;
     margin-bottom: 50px;
 }
 
 .servicos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    justify-items: center;
-    max-width: 1200px; /* Define a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
-    padding: 0 20px; /* Adiciona um padding lateral para espaçamento */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .servico-item {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    max-width: 90%;
-    padding: 10px; /* Ajuste o padding para reduzir a margem interna */
 }
 
 .servico-item img {
@@ -174,23 +190,14 @@ body {
 }
 
 .servico-item:hover {
-    transform: scale(1.0);
+    transform: scale(1.05);
 }
 
 .servico-item h3 {
-    font-size: 1.3em;
+    font-size: 20px;
     margin: 20px 0;
-    color: #333;
 }
-
-.servico-item p {
-    padding: 0 20px 20px;
-    color: #666;
-    font-size: 1em;
-}
-
-
-/* 9. SEÇÃO CONSULTÓRIO */
+/* 8. Consultório */
 .consultorio {
     padding: 100px 20px;
     background-color: #f5f5f5;
@@ -204,23 +211,24 @@ body {
 }
 
 .consultorio img {
-    width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
     margin-bottom: 20px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .consultorio p {
     font-size: 18px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    line-height: 1.5;
 }
 
-/* 10. SEÇÃO CONTATO */
+
+/* 9. Contato */
 .contato {
     padding: 100px 20px;
-    background-color: #fff;
     text-align: center;
 }
 
@@ -234,54 +242,30 @@ body {
     font-size: 18px;
     color: #333;
 }
-
-/* 11. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS) */
-@media screen and (max-width: 768px) {
-    /* Menu para dispositivos móveis */
-    .menu {
-        background-color: white; /* Define o fundo branco por padrão no mobile */
-        padding: 10px 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
-    }
-
+/* 10. Responsividade */
+@media (max-width: 768px) {
     .menu ul {
-        display: none; /* Esconde o menu por padrão em dispositivos móveis */
+        display: none;
         flex-direction: column;
-        align-items: center; /* Centraliza os itens horizontalmente */
         background-color: white;
         position: absolute;
-        top: 60px; /* Ajuste para evitar sobreposição do ícone */
+        top: 50px;
         left: 0;
         width: 100%;
-        padding-top: 10px; /* Espaço para a barra de menu */
-        z-index: 999; /* Garante que o menu fique acima de outros elementos */
     }
 
-    .menu ul.open {
-        display: flex; /* Mostra o menu ao adicionar a classe "open" */
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
     }
 
     .menu-icon {
-        display: block; /* Exibe o ícone de três traços em dispositivos móveis */
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        z-index: 1001; /* Mantém o ícone acima de outros elementos */
+        display: block;
     }
 
-    .menu.scrolled ul {
-        display: none; /* Garante que o menu não apareça automaticamente ao rolar */
-    }
-
-    .menu.scrolled ul.open {
-        display: flex; /* Só mostra o menu quando a classe "open" está presente */
-    }
-
-    /* Ajustes das seções para dispositivos móveis */
     .hero-text h1 {
         font-size: 36px;
     }
@@ -295,58 +279,7 @@ body {
         height: 120px;
     }
 
-    .biografia h2,
-    .servicos h2,
-    .consultorio h2,
-    .contato h2 {
-        font-size: 28px;
-    }
-
-    .servico-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    /* Ajuste dos serviços para ficarem em uma coluna */
     .servicos-container {
-        grid-template-columns: 1fr; /* Força uma única coluna */
-        gap: 20px; /* Espaçamento entre os itens */
-        padding: 0 10px;
-    }
-
-    .servico-item {
-        max-width: 100%; /* Ajusta o tamanho dos itens de serviço */
-        padding: 10px;
-    }
-}
-
-
-/* 12. ESTILOS PARA DESKTOP */
-@media screen and (min-width: 769px) {
-    /* Menu para dispositivos desktop */
-    .menu ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu ul li {
-        margin: 0 20px;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-    }
-
-    .menu.scrolled ul li a {
-        color: #333; /* Cor do texto no menu fixo */
-    }
-
-    .menu.scrolled {
-        background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        grid-template-columns: 1fr;
     }
 }

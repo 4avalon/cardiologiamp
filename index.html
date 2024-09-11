@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardiologia MP</title>
+    <!-- 1. Link para o arquivo de estilos -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Menu de navegação -->
+
+    <!-- 2. Menu de Navegação -->
     <header>
-        <div class="menu">
-            <ul>
+        <div class="menu" id="menu"> <!-- Removi a duplicação da div com classe "menu" -->
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Ícone hambúrguer -->
+            <ul id="menu-list"> <!-- Adicionei um ID para referência do JavaScript -->
                 <li><a href="#home">Home</a></li>
                 <li><a href="#biografia">Biografia</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#consultorio">Consultório</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         </div>
     </header>
 
-    <!-- Seção Hero 1 -->
-    <section class="hero hero-1">
+
+    <!-- 3. Seção Hero 1 (Home) -->
+    <section id="home" class="hero hero-1">
         <div class="hero-text">
             <h1>Cuidado Cardiológico de Excelência</h1>
             <p>Com a Dra. Maíra Rodrigues Oliveira Pimenta</p>
@@ -30,16 +33,14 @@
         <img src="assets/images/hero1.jpg" alt="Consultório Cardiológico">
     </section>
 
-    <!-- Seção Biografia -->
+    <!-- 4. Seção Biografia -->
     <section id="biografia" class="biografia">
         <img src="assets/images/dra-maira.jpg" alt="Dra. Maíra">
         <h2>Sobre a Dra. Maíra</h2>
-        <p>
-            A Dra. Maíra Rodrigues Oliveira Pimenta é cardiologista e arritmologista com especialização no Instituto Dante Pazzanese de Cardiologia e no InCor - FMUSP...
-        </p>
+        <p>A Dra. Maíra Rodrigues Oliveira Pimenta é cardiologista e arritmologista com especialização no Instituto Dante Pazzanese de Cardiologia e no InCor - FMUSP...</p>
     </section>
 
-    <!-- Seção Hero 2 -->
+    <!-- 5. Seção Hero 2 -->
     <section class="hero hero-2">
         <div class="hero-text">
             <h1>Conectada com a Natureza</h1>
@@ -48,8 +49,8 @@
         <img src="assets/images/hero2.jpg" alt="Corrida no parque em São Paulo">
     </section>
 
-    <!-- Seção de Serviços -->
-    <section class="servicos" id="servicos">
+    <!-- 6. Seção de Serviços -->
+    <section id="servicos" class="servicos">
         <h2>Nossos Serviços</h2>
         <div class="servicos-container">
             <div class="servico-item">
@@ -71,7 +72,7 @@
         </div>
     </section>
 
-    <!-- Seção Hero 3 -->
+    <!-- 7. Seção Hero 3 -->
     <section class="hero hero-3">
         <div class="hero-text">
             <h1>São Paulo à Noite</h1>
@@ -80,16 +81,14 @@
         <img src="assets/images/hero3.jpg" alt="São Paulo à Noite">
     </section>
 
-    <!-- Seção Consultório -->
+    <!-- 8. Seção Consultório -->
     <section id="consultorio" class="consultorio">
         <h2>Nosso Consultório</h2>
         <img src="assets/images/consultorio1.jpg" alt="Consultório Moderno">
-        <p>
-            Venha conhecer nosso consultório moderno, equipado com as mais avançadas tecnologias para o cuidado do seu coração.
-        </p>
+        <p>Venha conhecer nosso consultório moderno, equipado com as mais avançadas tecnologias para o cuidado do seu coração.</p>
     </section>
 
-    <!-- Seção Hero 4 -->
+    <!-- 9. Seção Hero 4 -->
     <section class="hero hero-4">
         <div class="hero-text">
             <h1>Esperança e Renovação</h1>
@@ -98,33 +97,14 @@
         <img src="assets/images/hero4.jpg" alt="Broto no Deserto de Sal">
     </section>
 
-    <!-- Seção Contato -->
+    <!-- 10. Seção Contato -->
     <section id="contato" class="contato">
         <h2>Entre em Contato</h2>
         <p>Email: contato@cardiologiamp.com.br</p>
         <p>Telefone: (11) 99999-9999</p>
     </section>
 
-    <!-- Script para comportamento do menu -->
-    <script>
-        window.addEventListener('scroll', function() {
-            const menu = document.querySelector('.menu');
-            if (window.scrollY > 50) {  // Se rolar mais de 50px
-                menu.classList.add('scrolled');
-            } else {
-                menu.classList.remove('scrolled');
-            }
-        });
-
-        function toggleMenu() {
-            const menu = document.querySelector('.menu ul');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-    </script>
-
+    <!-- 11. Script para comportamento do menu -->
+    <script src="js/menu.js"></script>
 </body>
 </html>
