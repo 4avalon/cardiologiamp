@@ -44,3 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// 4. Função para rolar suavemente até a seção ao clicar em um link
+document.querySelectorAll('#menu-list li a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão
+        const section = document.querySelector(this.getAttribute('href'));
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
+        console.log("Deslizando suavemente para a seção: " + this.getAttribute('href'));
+    });
+});
