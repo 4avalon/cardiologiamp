@@ -1,0 +1,82 @@
+/* 1. Menu de Navegação */
+.menu {
+    background-color: transparent;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.menu ul li a:hover {
+    color: #ff4b5c;
+}
+
+/* 2. Menu ao rolar */
+.menu.scrolled {
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;  /* Mantemos o padding uniforme */
+}
+
+.menu.scrolled ul li a {
+    color: #333;
+    text-shadow: none;
+}
+
+/* 3. Menu ícone para mobile */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* 4. Menu de três traços para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Animação suave ao abrir o menu no mobile */
+.menu ul {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
