@@ -17,7 +17,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+   min-height: 100vh; /* Garante que o hero ocupe toda a altura da tela */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +54,7 @@ body {
     padding: 100px 20px;
     text-align: center;
     background-color: #f5f5f5;
+    min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
 }
 
 .biografia img {
@@ -100,46 +101,117 @@ body {
     text-decoration: underline;
 }
 
-/* 7. Serviços */
+/* 7 -Seção de Serviços - Ajustes de Layout */
 .servicos {
-    padding: 50px 20px;
+    padding: 80px 40px;
     text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    color: white;
+    min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .servicos h2 {
     font-size: 36px;
     color: #007bff;
-    margin-bottom: 50px;
+    margin-bottom: 40px; /* Margem menor abaixo do título */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Container para os serviços no desktop */
 .servicos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Reduzimos o gap entre os serviços */
+    justify-items: center;
+    padding: 0 20px;
+    height: 70%; /* Faz os serviços ocuparem 70% da altura disponível */
 }
 
 .servico-item {
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px; /* Largura padrão */
+    height: 100%; /* Faz com que os serviços preencham a área vertical */
+    margin-top: 30px; /* Move a imagem um pouco mais para baixo */
 }
 
 .servico-item img {
     width: 100%;
-    height: auto;
+    height: 140px; /* Altura ajustada para smartphone */
+    object-fit: cover;
     border-bottom: 3px solid #007bff;
 }
 
 .servico-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efeito de hover */
 }
 
 .servico-item h3 {
     font-size: 20px;
-    margin: 20px 0;
+    margin: 10px; /* Reduzimos a margem para melhorar o espaçamento vertical */
+    color: #333;
+    text-align: center;
 }
+
+.servico-item p {
+    padding: 0 15px 15px 15px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+/* Ajuste do grid para dispositivos móveis - Carousel com 2 linhas e rolagem horizontal */
+@media (max-width: 768px) {
+    .servicos-container {
+        display: flex;
+        flex-wrap: wrap; /* Garante que os itens possam ser divididos em múltiplas linhas */
+        gap: 15px;
+        height: auto;
+        justify-content: center;
+        padding: 10px;
+        scroll-snap-type: x mandatory; /* Habilita o efeito de 'snap' */
+        overflow-x: scroll; /* Habilita o scroll horizontal */
+    }
+
+    .servico-item {
+        flex: 0 0 45%; /* Cada item ocupa 45% da largura da tela */
+        max-width: 45%; /* Garante que o item não ultrapasse a largura */
+        margin: 10px; /* Espaçamento entre os itens */
+        scroll-snap-align: center; /* Centraliza o item durante o scroll */
+    }
+
+    .servico-item img {
+        height: 180px; /* Ajusta a altura da imagem para ficar maior no mobile */
+        object-fit: cover;
+    }
+
+    .servicos-container::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem */
+    }
+}
+
+/* Ajustes para Desktop - Maior espaçamento */
+@media (min-width: 1024px) {
+    .servicos h2 {
+        margin-bottom: 60px; /* Mais espaço entre o título e os serviços no desktop */
+    }
+
+    .servicos-container {
+        gap: 15px; /* Reduz o gap em desktops */
+    }
+
+    .servico-item img {
+        height: 130px; /* Imagens menores e mais alinhadas */
+    }
+}
+
 /* 8. Consultório */
 .consultorio {
     padding: 100px 20px;
@@ -169,10 +241,13 @@ body {
 }
 
 
-/* 9. Contato */
+
+/*///////*/ 
+/* 9. Contato - */
 .contato {
     padding: 100px 20px;
     text-align: center;
+    min-height: 100vh; /* Garante que a seção de contato ocupe 100% da tela */
 }
 
 .contato h2 {
@@ -185,29 +260,48 @@ body {
     font-size: 18px;
     color: #333;
 }
-/* 10. Responsividade */
+/* 10 Rodapé */
+.main-footer {
+    background-color: #0077b6; /* Cor de fundo azul similar ao tema principal */
+    color: #ffffff; /* Cor do texto em branco */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px; /* Espaçamento acima do rodapé */
+}
+
+.main-footer p {
+    margin-bottom: 10px; /* Espaço entre o texto e as redes sociais */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main-footer .social-links {
+    list-style: none; /* Remove os marcadores das listas */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os itens */
+}
+
+.main-footer .social-links li {
+    display: inline-block;
+}
+
+.main-footer .social-links a {
+    color: #ffffff; /* Cor dos links em branco */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.main-footer .social-links a:hover {
+    color: #ff4b5c; /* Cor de destaque ao passar o mouse */
+}
+
+
+/* 11. Responsividade */
 @media (max-width: 768px) {
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-    }
-
-    .menu ul li {
-        margin: 10px 0;
-    }
-
-    .menu ul li a {
-        font-size: 20px;
-    }
-
-    .menu-icon {
-        display: block;
-    }
+   
 
     .hero-text h1 {
         font-size: 36px;
@@ -227,3 +321,21 @@ body {
     }
 }
 
+* 10. Responsividade para Serviços */
+@media (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr; /* Uma única coluna em dispositivos móveis */
+    }
+
+    .servico-item img {
+        height: 180px; /* Reduz ligeiramente a altura da imagem em dispositivos menores */
+    }
+
+    .servico-item h3 {
+        font-size: 20px;
+    }
+
+    .servico-item p {
+        font-size: 14px;
+    }
+}
