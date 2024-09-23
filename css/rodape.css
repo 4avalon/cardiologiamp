@@ -1,0 +1,62 @@
+/* ========================== */
+/*       1. Estilos Gerais      */
+/* ========================== */
+
+footer {
+    background-color: #0077b6; /* Cor de fundo azul */
+    color: #ffffff; /* Texto branco */
+    text-align: center;
+    padding: 40px 20px; /* Espaçamento no rodapé */
+    margin-top: 50px; /* Espaçamento acima do rodapé */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ========================== */
+/*     2. Redes Sociais        */
+/* ========================== */
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff4b5c; /* Cor de destaque ao passar o mouse */
+}
+
+/* ========================== */
+/*     3. Responsividade       */
+/* ========================== */
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 10px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .social-links a {
+        font-size: 16px;
+    }
+}

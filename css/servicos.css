@@ -1,0 +1,113 @@
+/* ========================== */
+/*      4. Seção de Serviços    */
+/* ========================== */
+
+.servicos {
+    padding: 80px 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0); /* Gradiente suave no fundo */
+    color: white;
+    min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.servicos h2 {
+    font-size: 36px; /* Tamanho do título */
+    color: #007bff; /* Cor do título */
+    margin-bottom: 40px; /* Margem abaixo do título */
+    text-transform: uppercase; /* Coloca o texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Container para os serviços no desktop */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Layout grid adaptável */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-items: center;
+    padding: 0 20px;
+    height: 70%; /* Os serviços ocupam 70% da altura disponível */
+}
+
+.servico-item {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde transbordos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    width: 220px; /* Largura fixa */
+    height: 100%; /* O item preenche a área vertical */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+.servico-item img {
+    width: 100%; /* A imagem ocupa 100% da largura */
+    height: 140px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem preencha sem distorção */
+    border-bottom: 3px solid #007bff; /* Borda inferior azul */
+}
+
+.servico-item:hover {
+    transform: scale(1.05); /* Aumenta o item no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
+
+.servico-item h3 {
+    font-size: 20px; /* Tamanho do texto do título */
+    margin: 10px; /* Espaçamento ao redor do título */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.servico-item p {
+    padding: 0 15px 15px 15px; /* Espaçamento interno do parágrafo */
+    font-size: 16px; /* Tamanho do texto */
+    color: #555; /* Cor do texto */
+    text-align: center; /* Centraliza o parágrafo */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .servicos-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens se dividam em múltiplas linhas */
+        gap: 15px; /* Espaço entre os itens no mobile */
+        height: auto;
+        justify-content: center;
+        padding: 10px;
+        scroll-snap-type: x mandatory; /* Efeito de snap na rolagem */
+        overflow-x: scroll; /* Rolagem horizontal */
+    }
+
+    .servico-item {
+        flex: 0 0 45%; /* Cada item ocupa 45% da largura da tela */
+        max-width: 45%; /* Garante que o item não ultrapasse a largura */
+        margin: 10px; /* Espaçamento entre os itens */
+        scroll-snap-align: center; /* Centraliza o item durante o scroll */
+    }
+
+    .servico-item img {
+        height: 180px; /* Ajusta a altura da imagem no mobile */
+        object-fit: cover; /* Garante o preenchimento sem distorção */
+    }
+
+    .servicos-container::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem */
+    }
+}
+
+/* Ajustes para desktop */
+@media (min-width: 1024px) {
+    .servicos h2 {
+        margin-bottom: 60px; /* Maior espaço abaixo do título no desktop */
+    }
+
+    .servicos-container {
+        gap: 15px; /* Reduz o gap no desktop */
+    }
+
+    .servico-item img {
+        height: 130px; /* Imagens menores e mais alinhadas no desktop */
+    }
+}

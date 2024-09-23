@@ -1,0 +1,20 @@
+/* ========================== */
+/*        6. Seção Contato     */
+/* ========================== */
+
+.contato {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh; /* Garante que a seção ocupe 100% da altura da tela */
+}
+
+.contato h2 {
+    font-size: 36px; /* Tamanho do título */
+    color: #007bff; /* Cor do título */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.contato p {
+    font-size: 18px; /* Tamanho do parágrafo */
+    color: #333; /* Cor do texto */
+}
