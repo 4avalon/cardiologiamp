@@ -10,20 +10,27 @@ let scrollDuration = 1600;
 // Abre e fecha o menu ao clicar no ícone do menu no mobile
 function toggleMenu() {
     var menu = document.getElementById("menu-list");
+    var menuIcon = document.getElementById("menu-icon"); // Pega o ícone de hambúrguer
 
     // Verifica o estilo de display atual
     if (menu.style.display === "none" || menu.style.display === "") {
         menu.style.display = "flex";  // Abre o menu com display flex
         menu.classList.add("active"); // Adiciona a classe active para animação
+menuIcon.innerHTML = "&nbsp;&times;&nbsp;"; // Adiciona dois espaços &nbsp; antes e depois do "X"
+  // Troca o ícone para "X"
+        menuIcon.classList.add("open");  // Adiciona a classe 'open' para o estilo de fundo fosco
         console.log("Menu aberto");
     } else {
         menu.classList.remove("active"); // Remove a classe active para animação
+        menuIcon.innerHTML = "&#9776;";  // Volta para o ícone de hambúrguer
+        menuIcon.classList.remove("open");  // Remove a classe 'open'
         setTimeout(() => {
             menu.style.display = "none";  // Fecha o menu após a animação
             console.log("Menu fechado");
         }, 300); // Tempo para aguardar a animação
     }
 }
+
 // ==========================
 // 3. Função de Aplicar Classe 'Scrolled' ao Rolar
 // ==========================
@@ -52,14 +59,19 @@ window.onscroll = function() {
 document.querySelectorAll("#menu-list li a").forEach(function(link) {
     link.addEventListener("click", function() {
         var menu = document.getElementById("menu-list");
+        var menuIcon = document.getElementById("menu-icon"); // Pega o ícone de hambúrguer
+        menuIcon.classList.remove("open");  // Remove a classe 'open'
+        
         if (window.innerWidth <= 768) {  // Fecha o menu em telas menores que 768px
             menu.style.display = "none";
+            menuIcon.innerHTML = "&#9776;";  // Volta para o ícone de hambúrguer
             console.log("Link clicado - Menu fechado no mobile");
         } else {
             console.log("Link clicado - Não foi necessário fechar o menu (desktop)");
         }
     });
 });
+
 
 // ==========================
 // 5. Função para Rolar Suavemente com Tempo Fixo

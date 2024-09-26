@@ -8,10 +8,10 @@
  */
 
 // Variáveis Globais
-let timeToHero = 400;  // Tempo de rolagem até o hero em milissegundos
-let timeToSection = 800;  // Tempo de rolagem do hero até a seção em milissegundos
+let timeToHero = 300;  // Tempo de rolagem até o hero em milissegundos
+let timeToSection = 400;  // Tempo de rolagem do hero até a seção em milissegundos
 let enablePause = true;  // Controle se deve pausar entre o hero e a seção
-let pauseDuration = 2000;  // Duração da pausa entre o hero e a seção em milissegundos
+let pauseDuration = 1500;  // Duração da pausa entre o hero e a seção em milissegundos
 
 // 1. Função para verificar se está rolando para cima ou para baixo
 function isScrollingDown(targetPosition) {
