@@ -11,10 +11,10 @@
 
 .biografia img {
     border-radius: 50%; /* Faz a imagem ficar redonda */
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover; /* Garante que a imagem se ajuste sem distorções */
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     transition: box-shadow 0.2s ease, transform 0.3s ease; /* Transições suaves ao passar o mouse */
 }
 
@@ -33,7 +33,7 @@
 .biografia p {
     font-size: 18px;
     max-width: 800px; /* Limita a largura do parágrafo */
-    margin: 0 auto 10px; /* Centraliza o texto e adiciona margem */
+    margin: 0 auto 80px; /* Centraliza o texto e adiciona margem */
     line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
     cursor: default;
 }
@@ -45,7 +45,7 @@
     font-weight: bold;
     transition: color 0.3s ease;
     display: inline-block; /* Garante que o link ocupe sua própria linha */
-    margin-top: 10px; /* Espaçamento entre o parágrafo e o link */
+    margin-top: 40px; /* Espaçamento entre o parágrafo e o link */
 }
 
 .biografia a:hover {

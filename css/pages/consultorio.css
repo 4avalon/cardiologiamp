@@ -1,0 +1,106 @@
+/* ========================== */
+/*     8. Seção Consultório    */
+/* ========================== */
+
+.consultorio {
+    padding: 90px 20px; /* Ajuste no padding para igualar ao da seção Serviços */
+    text-align: center;
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
+}
+
+.consultorio-container {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr; /* Três colunas: imagem e texto, linha, mapa */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 40px; /* Espaçamento entre colunas */
+    max-width: 1200px; /* Largura máxima para o container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno para dar mais respiro */
+}
+
+/* Coluna de Imagem e Texto */
+.consultorio-imagem {
+    text-align: left;
+}
+
+.consultorio-imagem img {
+    width: 100%;
+    max-width: 450px; /* Aumentei um pouco para ter mais presença visual */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Margem inferior */
+    align-items: center;
+    transition: transform 0.3s ease; /* Transição suave para efeito hover */
+}
+
+.consultorio-imagem img:hover {
+    transform: scale(1.05); /* Efeito hover para aumentar levemente a imagem */
+}
+
+.consultorio-imagem p {
+    font-size: 1.2rem; /* Aumentar um pouco o texto da descrição para melhorar a legibilidade */
+    margin-top: 10px;
+}
+
+/* Linha Vertical no Meio */
+.consultorio-separador {
+    width: 2px;
+    height: 100%;
+    background-color: #333; /* Cor da linha */
+}
+
+/* Coluna do Mapa */
+.consultorio-mapa {
+    text-align: left;
+}
+
+/* Ocultar título h3 em telas maiores */
+.consultorio-mapa h3 {
+    display: none;
+}
+
+/* Ajustar título h3 para dispositivos móveis */
+@media (max-width: 768px) {
+    .consultorio-container {
+        grid-template-columns: 1fr; /* Coluna única no mobile */
+        gap: 30px; /* Aumenta o espaço entre elementos */
+    }
+
+    .consultorio-separador {
+        display: none; /* Esconde a linha no mobile */
+    }
+
+    .consultorio-imagem img, .consultorio-mapa iframe {
+        max-width: 100%; /* Permite que as imagens ocupem toda a largura disponível */
+    }
+
+    .consultorio-mapa h3 {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+}
+
+.consultorio h2 {
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 50px; /* Igualando ao espaçamento da seção de Serviços */
+    text-align: center;
+}
+
+.consultorio-mapa iframe {
+    width: 100%;
+    max-width: 450px; /* Largura máxima do mapa para uma boa proporção */
+    border-radius: 8px;
+}
+
+.google-maps-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+}
+
+.google-maps-link:hover {
+    text-decoration: underline; /* Sublinhar o link ao passar o mouse */
+}

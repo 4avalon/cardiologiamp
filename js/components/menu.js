@@ -2,7 +2,7 @@
 // 1. Variáveis Globais
 // ==========================
 // Definição do tempo fixo para rolar entre seções (1600 ms)
-let scrollDuration = 1600;
+let scrollDuration = 300;
 
 // ==========================
 // 2. Função de Alternar o Menu no Modo Mobile

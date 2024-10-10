@@ -1,0 +1,103 @@
+/* ========================== */
+/*      4. Seção de Serviços   */
+/* ========================== */
+/* Container para limitar a largura e centralizar o conteúdo */
+.container {
+    max-width: 700px; /* Define a largura máxima, ajuste conforme preferir */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento nas laterais para evitar que o conteúdo encoste nas bordas */
+    box-sizing: border-box;
+}
+
+.servicos {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container dos serviços */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas com um tamanho mínimo para torná-las mais compactas */
+    gap: 40px; /* Aumenta um pouco o espaço entre os itens */
+    justify-items: center;
+    justify-content: center; /* Centraliza o conteúdo do grid */
+    padding: 20px 0; /* Ajuste o espaçamento interno */
+    max-width: 500px; /* Define uma largura máxima para o container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Estilo para cada item de serviço */
+.servico-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%; /* Faz o item preencher um pouco menos da coluna disponível */
+    max-width: 250px; /* Limita a largura máxima do card */
+    padding: 0px;
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagem e texto sobrepostos */
+.servico-item img {
+    width: 100%;
+    max-width: 260px;  /* Limita a largura máxima da imagem */
+    max-height: 260px; /* Limita a altura máxima da imagem */
+    height: auto;
+    object-fit: cover; /* Garante que a imagem preencha o espaço do card sem distorção */
+    filter: brightness(70%);
+    transition: filter 0.3s ease;
+    border: none; /* Remove qualquer borda padrão que possa existir */
+}
+
+.servico-item:hover img {
+    filter: brightness(100%);
+}
+
+.servico-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo preto translúcido */
+    padding: 2px 5px; /* Espaço ao redor do texto */
+    border-radius: 5px; /* Canto arredondado */
+}
+
+/* Ajuste no título "Nossos Serviços" */
+.servicos h2 {
+      font-size: 2rem; /* Define um tamanho relativo que se adapta ao tamanho da fonte raiz */
+    margin-bottom: 30px; /* Reduzir o valor para diminuir o espaço */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr; /* Muda para uma única coluna em dispositivos móveis */
+        gap: 20px; /* Espaçamento entre os itens reduzido */
+        padding: 20px; /* Espaçamento interno */
+    }
+
+    .servico-item {
+        width: 90%; /* Cada item ocupará 90% da largura da tela */
+        margin: 0 auto; /* Centraliza cada card */
+    }
+
+    .servico-item img {
+        height: 200px; /* Ajusta a altura da imagem em dispositivos móveis */
+    }
+}

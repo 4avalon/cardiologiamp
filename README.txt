@@ -2,59 +2,66 @@ Listagem de caminhos de pasta
 O número de série do volume é 96BF-CC0E
 C:.
 +---assets
-|   \---images
-+---Cliente
+|   +---fonts
+|   +---icons
+|   +---images
+|   \---videos
 +---css
-|   \---menu
+|   +---components
+|   \---pages
 +---docs
 +---html
 \---js
-    \---menu
+    +---components
+    \---pages
 Listagem de caminhos de pasta
 O número de série do volume é 96BF-CC0E
 C:.
 ¦   .gitignore
-¦   cd
 ¦   index.html
 ¦   README.txt
 ¦   
 +---assets
+¦   +---fonts
+¦   +---icons
+¦   ¦       favico.png
+¦   ¦       
 ¦   +---images
-¦           cardiology_consultation.jpg
-¦           consultorio1.jpg
-¦           consultorio2.jpg
-¦           dra-mairafake.jpg
-¦           drmaira.jpg
-¦           favico.png
-¦           hero1.jpg
-¦           hero2.jpg
-¦           hero3.jpg
-¦           hero4.jpg
-¦           servico1.jpg
-¦           servico2.jpg
-¦           servico3.jpg
-¦           servico4.jpg
-¦           
-+---Cliente
-¦       curriculo_maira.docx
-¦       definicao.txt
-¦       
+¦   ¦       cardiology_consultation.jpg
+¦   ¦       consultorio1.jpg
+¦   ¦       consultorio2.jpg
+¦   ¦       dra-mairafake.jpg
+¦   ¦       drmaira.jpg
+¦   ¦       hero1.jpg
+¦   ¦       hero2.jpg
+¦   ¦       hero3.jpg
+¦   ¦       hero4.jpg
+¦   ¦       servico1.jpg
+¦   ¦       servico2.jpg
+¦   ¦       servico3.jpg
+¦   ¦       servico4.jpg
+¦   ¦       
+¦   +---videos
 +---css
-¦   ¦   biografia.css
-¦   ¦   consultorio.css
-¦   ¦   contato.css
-¦   ¦   hero.css
-¦   ¦   rodape.css
-¦   ¦   servicos.css
 ¦   ¦   styles.css
 ¦   ¦   styles2.css
 ¦   ¦   
-¦   +---menu
-¦           menu.css
-¦           menu2.css
+¦   +---components
+¦   ¦       hero.css
+¦   ¦       menu.css
+¦   ¦       menu2.css
+¦   ¦       rodape.css
+¦   ¦       
+¦   +---pages
+¦           biografia.css
+¦           consultorio.css
+¦           contato.css
+¦           servicos.css
 ¦           
 +---docs
 ¦       CurrA~_culo MaA~_ra.docx
+¦       curriculo_maira.docx
+¦       definicao.txt
 ¦       drmaira01.jpg
 ¦       drmaira02.jpg
 ¦       drmaira03.jpg
@@ -76,9 +83,10 @@ C:.
 +---js
     ¦   scripts.js
     ¦   
-    +---menu
-            menu.js
-            menu2.js
-            menuSmoothScrollEffect1.js
-            menuSmoothScrollFixedTime.js
-            
+    +---components
+    ¦       menu.js
+    ¦       menu2.js
+    ¦       menuSmoothScrollEffect1.js
+    ¦       menuSmoothScrollFixedTime.js
+    ¦       
+    +---pages

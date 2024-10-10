@@ -34,6 +34,8 @@
 }
 
 .hero-text p {
-    font-size: 24px; /* Tamanho de fonte para o subtítulo */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra mais leve no parágrafo */
+    /* background-color: rgba(100, 100, 100, 0.08); /* Fundo cinza translúcido */
+    font-size: 24px; /* Tamanho da fonte do subtítulo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1); /* Sombra mais intensa e perceptível */
 }
+
